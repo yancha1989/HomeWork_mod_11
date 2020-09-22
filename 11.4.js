@@ -1,9 +1,8 @@
-function Num(a, b) {
-  let i = a - 1;
-  while (i < b) {
-    i = i + 1;
-    console.log(i);
+function Same(a, b) {
+  let i = a;
+  {
+     timerid = setInterval(function() { if(i <= b) console.log(i++); else (clearInterval(timerid)) }, 1000);
+    }
   }
-}
-Num(5, 9);
-// тут к сожалению не смог разобраться, добавляю setTimeout, у меня задержка не в выводе значений, а выводе всей функции, по идее нужно отложить console.log, но почему-то у меня тогда последний параметр начинает зацикливаться, до последнего сидел
+
+Same(5, 11)
